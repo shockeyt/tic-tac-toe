@@ -1,0 +1,8 @@
+table {
+	background-color: grey;
+	width: 100%;
+	height: 600px;
+}
+th {
+	border: 5px solid black;
+}
