@@ -5,26 +5,48 @@
 	<link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-	<table>
-		<tr class="row1">
-			<th>1</th>
-			<th>2</th>
-			<th>3</th>
-		</tr>
-		<tr class="row2">
-			<th>4</th>
-			<th>5</th>
-			<th>6</th>
-		</tr>
-		<tr class="row3">
-			<th>7</th>
-			<th>8</th>
-			<th>9</th>
-		</tr>
-	</table>
-
+	<section id="main">
+		<table>
+			<tr class="row1">
+				<th class="cell" id="1">1</th>
+				<th class="cell" id="2">2</th>
+				<th class="cell" id="3">3</th>
+			</tr>
+			<tr class="row2">
+				<th class="cell" id="4">4</th>
+				<th class="cell" id="5">5</th>
+				<th class="cell" id="6">6</th>
+			</tr>
+			<tr class="row3">
+				<th class="cell" id="7">7</th>
+				<th class="cell" id="8">8</th>
+				<th class="cell" id="9">9</th>
+			</tr>
+		</table>
+		<button>RESET</button>
+	</section>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
+
+		var test = $('th').innerHTML = "hello";
+		console.log(test);
+		function testword() {
+			var newdiv = $("<div>Howdy</div>");
+
+			console.log(newdiv);
+			$('#1').append(newdiv);
+
+		}
+
+		$('#1').click(function(event) {
+			// alert("cell was clicked");
+		
+			event.preventDefault();
+
+			testword();
+		});
+
+
 	</script>
 </body>
 </html>
