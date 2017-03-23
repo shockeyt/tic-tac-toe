@@ -8,19 +8,19 @@
 	<section id="main">
 		<table>
 			<tr class="row1">
+				<th class="cell" id="0">0</th>
 				<th class="cell" id="1">1</th>
 				<th class="cell" id="2">2</th>
-				<th class="cell" id="3">3</th>
 			</tr>
 			<tr class="row2">
+				<th class="cell" id="3">3</th>
 				<th class="cell" id="4">4</th>
 				<th class="cell" id="5">5</th>
-				<th class="cell" id="6">6</th>
 			</tr>
 			<tr class="row3">
+				<th class="cell" id="6">6</th>
 				<th class="cell" id="7">7</th>
 				<th class="cell" id="8">8</th>
-				<th class="cell" id="9">9</th>
 			</tr>
 		</table>
 		<button>RESET</button>
@@ -28,23 +28,52 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 
+		// var cell = 
+		// 	for (var i = 0; i < th.length; i++) {
+		// 		var cellArray = th[i];
+		// 		console.log(cellArray);
+		// 	}
 		var test = $('th').innerHTML = "hello";
-		console.log(test);
+		var divX = $("<div>X</div>");
+		var divO = $("<div>O</div>");
+		// console.log(test);
 		function testword() {
-			var newdiv = $("<div>Howdy</div>");
+			// var newdiv = $("<div>Howdy</div>");
 
-			console.log(newdiv);
-			$('#1').append(newdiv);
+			// console.log(divX);
+			// $('.cell').append(divX);
 
 		}
-
-		$('#1').click(function(event) {
-			// alert("cell was clicked");
+		// TABLE SEARCH
+		var currentPlayer = 1;
 		
-			event.preventDefault();
 
-			testword();
+		$().ready(function() {
+			$('th').click(function() {
+				if (currentPlayer == 1) {
+					$(this).text("X");
+					currentPlayer++;
+				} else {
+
+					$(this).text("O");
+					currentPlayer--;
+				}
+				
+				
+				
+				console.log(this);
+			});
+
 		});
+		// 	$('th').click(function(event) {
+		// 	// alert("cell was clicked");
+		
+		// 	event.preventDefault();
+
+
+		// 	testword();
+		// 	console.log(this);
+		// });
 
 
 	</script>
