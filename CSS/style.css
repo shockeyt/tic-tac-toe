@@ -23,13 +23,20 @@ th {
 	border-radius: 30px;
 	text-shadow: #CCC 10px 0 10px;
 	width: 100px;
+	max-width: 100px;
 	height: 100px;
+	max-height: 100px;
 }
-
+tr {
+	width: 100px;
+	max-width: 100px;
+	height: 100px;
+	max-height: 100px;
+}
 .cell.x {
 	color: red;
 	/*background-color: lightblue;*/
-	font-size: 130px;
+	font-size: 100px;
 	/*width: 80px;
 	height: 80px;*/
 
@@ -38,7 +45,7 @@ th {
 .cell.y {
 	color: blue;
 	/*background-color: lightblue;*/
-	font-size: 130px;
+	font-size: 100px;
 	/*width: 80px;
 	height: 80px;*/
 

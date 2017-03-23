@@ -61,7 +61,7 @@
 				}
 				// REMOVES CLICK/BUT DOESN'T RESET W/ BUTTON
 				// $(this).unbind("click");
-				
+				$(this).off("click");
 				
 				console.log(this);
 			});
@@ -76,6 +76,7 @@
 				$('th').empty();
 				$('th').removeClass("x");
 				$('th').removeClass("y");
+				$('th').on("click");
 			}
 
 		$('button').click(function(event) {
@@ -84,7 +85,10 @@
 			resetBoard();
 
 		});
-		
+		// RESETS CASH/RELOADS WINDOW
+		// $('.button').click(function(){
+		// 	location.reload();
+		// });
 
 	</script>
 </body>
