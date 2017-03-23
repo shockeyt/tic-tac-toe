@@ -6,3 +6,7 @@ table {
 th {
 	border: 5px solid black;
 }
+
+.cell {
+	color: red;
+}

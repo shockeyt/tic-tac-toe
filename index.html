@@ -8,19 +8,19 @@
 	<section id="main">
 		<table>
 			<tr class="row1">
-				<th class="cell" id="0" value=0>0</th>
-				<th class="cell" id="1" value=1>1</th>
-				<th class="cell" id="2" value=2>2</th>
+				<th class="cell" id="0" value=0></th>
+				<th class="cell" id="1" value=1></th>
+				<th class="cell" id="2" value=2></th>
 			</tr>
 			<tr class="row2">
-				<th class="cell" id="3" value=3>3</th>
-				<th class="cell" id="4" value=4>4</th>
-				<th class="cell" id="5" value=5>5</th>
+				<th class="cell" id="3" value=3></th>
+				<th class="cell" id="4" value=4></th>
+				<th class="cell" id="5" value=5></th>
 			</tr>
 			<tr class="row3">
-				<th class="cell" id="6" value=6>6</th>
-				<th class="cell" id="7" value=7>7</th>
-				<th class="cell" id="8" value=8>8</th>
+				<th class="cell" id="6" value=6></th>
+				<th class="cell" id="7" value=7></th>
+				<th class="cell" id="8" value=8></th>
 			</tr>
 		</table>
 		<button>RESET</button>
@@ -47,16 +47,18 @@
 		// TABLE SEARCH
 		var currentPlayer = 1;
 		
+		// ONE CLICK OPTION FOR BELOW
+		// $('th').one("click", function()
 
 		$().ready(function() {
-			$('th').one("click", function() {
+			$('th').click (function() {
 				if (currentPlayer == 1) {
-					$(this).append(divX);
-					// $(this).text("X");
+					// $(this).append(divX);
+					$(this).text("X");
 					currentPlayer++;
 				} else {
-					$(this).append(divO);
-					// $(this).text("O");
+					// $(this).append(divO);
+					$(this).text("O");
 					currentPlayer--;
 				}
 				
@@ -70,8 +72,9 @@
 		var reset = $("<div></div>");
 			// console.log(reset);
 			function resetBoard() {
-				$(divX).remove();
-				$(divO).remove();
+				// $(divX).remove();
+				// $(divO).remove();
+				$('th').empty();
 			}
 
 		$('button').click(function(event) {
