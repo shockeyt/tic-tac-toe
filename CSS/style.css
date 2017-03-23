@@ -9,8 +9,8 @@ body {
 	width: 100%;
 }
 .container {
-
-	width: 100%;
+	margin: 0 auto;
+	width: 80%;
 }
 table {
 	/*background-color: grey;*/
@@ -22,12 +22,16 @@ th {
 	border: 6px solid black;
 	border-radius: 30px;
 	text-shadow: #CCC 10px 0 10px;
+	width: 100px;
+	height: 100px;
 }
 
 .cell {
 	color: red;
 	/*background-color: lightblue;*/
 	font-size: 130px;
+	/*width: 80px;
+	height: 80px;*/
 
 }
 

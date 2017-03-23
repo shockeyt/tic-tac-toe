@@ -34,23 +34,11 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 
-		// var cell = 
-		// 	for (var i = 0; i < th.length; i++) {
-		// 		var cellArray = th[i];
-		// 		console.log(cellArray);
-		// 	}
 		var test = $('th').innerHTML = "hello";
 		var divX = $("<div>X</div>");
 		var divO = $("<div>O</div>");
 		// console.log(test);
-		// function testword() {
-		// 	var newdiv = $("<div>Howdy</div>");
-
-		// 	console.log(divX);
-		// 	$('.cell').append(divX);
-
-		// }
-		// TABLE SEARCH
+	
 		var currentPlayer = 1;
 		
 		// ONE CLICK OPTION FOR BELOW
@@ -71,7 +59,8 @@
 					currentPlayer--;
 					
 				}
-				$(this).unbind("click");
+				// REMOVES CLICK/BUT DOESN'T RESET W/ BUTTON
+				// $(this).unbind("click");
 				
 				
 				console.log(this);
@@ -88,20 +77,11 @@
 			}
 
 		$('button').click(function(event) {
-			alert("button was clicked");
+			// alert("button was clicked");
 			event.preventDefault();
 			resetBoard();
 		});
-		// 	$('th').click(function(event) {
-		// 	// alert("cell was clicked");
 		
-		// 	event.preventDefault();
-
-
-		// 	testword();
-		// 	console.log(this);
-		// });
-
 
 	</script>
 </body>
