@@ -26,8 +26,17 @@ th {
 	height: 100px;
 }
 
-.cell {
+.cell.x {
 	color: red;
+	/*background-color: lightblue;*/
+	font-size: 130px;
+	/*width: 80px;
+	height: 80px;*/
+
+}
+
+.cell.y {
+	color: blue;
 	/*background-color: lightblue;*/
 	font-size: 130px;
 	/*width: 80px;
