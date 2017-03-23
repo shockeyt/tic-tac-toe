@@ -81,8 +81,11 @@
 				// console.log(checkingid);
 				function checkWin() {
 					// alert("checkwin has ran");
-					if ($('#id0').hasClass('x') && $('#id1').hasClass('x') && $('#id2').hasClass('x')) {
-						alert("win");
+					if ($('#id0').hasClass('x') && $('#id1').hasClass('x') && $('#id2').hasClass('x') || $('#id3').hasClass('x') && $('#id4').hasClass('x') && $('#id5').hasClass('x') || $('#id6').hasClass('x') && $('#id7').hasClass('x') && $('#id8').hasClass('x') || $('#id0').hasClass('x') && $('#id3').hasClass('x') && $('#id6').hasClass('x') || $('#id1').hasClass('x') && $('#id4').hasClass('x') && $('#id7').hasClass('x') || $('#id2').hasClass('x') && $('#id5').hasClass('x') && $('#id8').hasClass('x') || $('#id0').hasClass('x') && $('#id4').hasClass('x') && $('#id8').hasClass('x') || $('#id2').hasClass('x') && $('#id4').hasClass('x') && $('#id6').hasClass('x')) {
+						alert("Player X wins!");
+					} else if ($('#id0').hasClass('y') && $('#id1').hasClass('y') && $('#id2').hasClass('y') || $('#id3').hasClass('y') && $('#id4').hasClass('y') && $('#id5').hasClass('y') || $('#id6').hasClass('y') && $('#id7').hasClass('y') && $('#id8').hasClass('y') || $('#id0').hasClass('y') && $('#id3').hasClass('y') && $('#id6').hasClass('y') || $('#id1').hasClass('y') && $('#id4').hasClass('y') && $('#id7').hasClass('y') || $('#id2').hasClass('y') && $('#id5').hasClass('y') && $('#id8').hasClass('y') || $('#id0').hasClass('y') && $('#id4').hasClass('y') && $('#id8').hasClass('y') || $('#id2').hasClass('y') && $('#id4').hasClass('y') && $('#id6').hasClass('y')) { 
+						alert("Player Y wins!");
+
 					}
 					// if ($(this).attr('class', 'x') && ) {
 					// 	alert("got a match");
