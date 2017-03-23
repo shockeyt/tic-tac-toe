@@ -37,13 +37,13 @@
 		var divX = $("<div>X</div>");
 		var divO = $("<div>O</div>");
 		// console.log(test);
-		function testword() {
-			// var newdiv = $("<div>Howdy</div>");
+		// function testword() {
+		// 	var newdiv = $("<div>Howdy</div>");
 
-			// console.log(divX);
-			// $('.cell').append(divX);
+		// 	console.log(divX);
+		// 	$('.cell').append(divX);
 
-		}
+		// }
 		// TABLE SEARCH
 		var currentPlayer = 1;
 		
@@ -65,6 +65,19 @@
 				console.log(this);
 			});
 
+		});
+
+		var reset = $("<div></div>");
+			// console.log(reset);
+			function resetBoard() {
+				$(divX).remove();
+				$(divO).remove();
+			}
+
+		$('button').click(function(event) {
+			alert("button was clicked");
+			event.preventDefault();
+			resetBoard();
 		});
 		// 	$('th').click(function(event) {
 		// 	// alert("cell was clicked");
