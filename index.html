@@ -11,19 +11,20 @@
 			<div class="container">
 				<table>
 					<tr class="row1">
-						<th class="cell" id="0" value=0></th>
-						<th class="cell" id="1" value=1></th>
-						<th class="cell" id="2" value=2></th>
+						<!-- td instead? -->
+						<th class="cell" id="id0" value=0></th>
+						<th class="cell" id="id1" value=1></th>
+						<th class="cell" id="id2" value=2></th>
 					</tr>
 					<tr class="row2">
-						<th class="cell" id="3" value=3></th>
-						<th class="cell" id="4" value=4></th>
-						<th class="cell" id="5" value=5></th>
+						<th class="cell" id="id3" value=3></th>
+						<th class="cell" id="id4" value=4></th>
+						<th class="cell" id="id5" value=5></th>
 					</tr>
 					<tr class="row3">
-						<th class="cell" id="6" value=6></th>
-						<th class="cell" id="7" value=7></th>
-						<th class="cell" id="8" value=8></th>
+						<th class="cell" id="id6" value=6></th>
+						<th class="cell" id="id7" value=7></th>
+						<th class="cell" id="id8" value=8></th>
 					</tr>
 				</table>
 			</div>
@@ -40,6 +41,9 @@
 		// console.log(test);
 	
 		var currentPlayer = 1;
+		var arrayX = [];
+		var arrayY = []; 
+		
 		
 		// ONE CLICK OPTION FOR BELOW
 		// $('th').one("click", function()
@@ -50,20 +54,48 @@
 					// $(this).append(divX);
 					// $(this).append(divX);
 					$(this).text("X").addClass("x");
+					// $(this).push(arrayX);
+					// console.log(arrayX);
+					checkWin();
 					currentPlayer++;
 					
 				} else {
 					// $(this).append(divO);
 					// $(this).append(divO);
 					$(this).text("O").addClass("y");
+					// $(this).push(arrayY);
+					// console.log(arrayY);
+					checkWin();
 					currentPlayer--;
 					
 				}
+
 				// REMOVES CLICK/BUT DOESN'T RESET W/ BUTTON
 				// $(this).unbind("click");
-				$(this).off("click");
+				// $(this).off("click");
 				
 				console.log(this);
+				var checkingclass = $('th').attr('class');
+				var checkingid = $('th').attr('id');
+				// console.log(checkingclass);
+				// console.log(checkingid);
+				function checkWin() {
+					// alert("checkwin has ran");
+					if ($('#id0').hasClass('x') && $('#id1').hasClass('x') && $('#id2').hasClass('x')) {
+						alert("win");
+					}
+					// if ($(this).attr('class', 'x') && ) {
+					// 	alert("got a match");
+
+					// } else {
+
+					// }
+					// if (($("th").text() === $("#0")) && ($("th").text() === $("#1")) && ($("th").text() === $("#2"))) {
+					// 	alert("Player X wins");
+					// } else {
+
+					// }
+				}
 			});
 
 		});
